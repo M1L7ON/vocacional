@@ -1,0 +1,425 @@
+
+/* =========================================
+   ORIENTA FUTURO
+   DISEÑO RESPONSIVE
+========================================= */
+
+
+/* =========================================
+   1. TABLETS Y LAPTOPS PEQUEÑAS
+   Hasta 1199px
+========================================= */
+
+@media (max-width: 1199px) {
+
+    /* Navegación */
+    .navbar .nav-link {
+        font-size: 11px;
+        padding-left: 6px !important;
+        padding-right: 6px !important;
+    }
+
+    .brand-name {
+        font-size: 15px;
+    }
+
+    /* Portada */
+    .hero-content h1 {
+        font-size: 46px;
+    }
+
+    .hero-illustration {
+        max-width: 420px;
+    }
+
+    .illustration-circle {
+        width: 310px;
+        height: 310px;
+    }
+
+    .illustration-content {
+        width: 225px;
+        height: 225px;
+    }
+
+    .card-two {
+        right: -10px;
+    }
+}
+
+
+/* =========================================
+   2. TABLETS
+   Hasta 991px
+========================================= */
+
+@media (max-width: 991px) {
+
+    /* Navegación */
+    .navbar {
+        padding: 12px 0;
+    }
+
+    .navbar-collapse {
+        margin-top: 15px;
+        padding: 15px;
+
+        background-color: var(--color-secondary-light);
+        border-radius: 12px;
+    }
+
+    .navbar-nav {
+        align-items: stretch !important;
+        gap: 5px;
+    }
+
+    .navbar .nav-link {
+        font-size: 14px;
+        padding: 10px 12px !important;
+        border-radius: 7px;
+    }
+
+    .navbar .nav-link:hover,
+    .navbar .nav-link.active {
+        background-color: rgba(22, 184, 173, 0.12);
+    }
+
+    /* Portada */
+    .hero-section {
+        padding-top: 135px;
+        padding-bottom: 70px;
+        text-align: center;
+    }
+
+    .hero-content {
+        margin-bottom: 45px;
+    }
+
+    .hero-content h1 {
+        font-size: 48px;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-note {
+        justify-content: center;
+    }
+
+    /* Ilustración */
+    .hero-illustration {
+        margin: 0 auto;
+        max-width: 470px;
+    }
+
+    /* Secciones */
+    .welcome-section,
+    .modules-section {
+        padding: 75px 0;
+    }
+
+    .module-card {
+        padding: 25px;
+    }
+
+    .module-card p {
+        min-height: auto;
+    }
+
+}
+
+
+/* =========================================
+   3. CELULARES GRANDES
+   Hasta 767px
+========================================= */
+
+@media (max-width: 767px) {
+
+    /* Navegación */
+    .navbar {
+        padding: 10px 0;
+    }
+
+    .logo-icon {
+        width: 39px;
+        height: 39px;
+        font-size: 22px;
+    }
+
+    .brand-name {
+        font-size: 14px;
+    }
+
+    .brand-text small {
+        font-size: 10px;
+    }
+
+    /* Portada */
+    .hero-section {
+        padding: 120px 0 55px;
+    }
+
+    .hero-label {
+        font-size: 10px;
+        margin-bottom: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 39px;
+        letter-spacing: -1px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn-primary-custom,
+    .btn-outline-custom {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .hero-note {
+        font-size: 11px;
+        max-width: 330px;
+        margin: 22px auto 0;
+    }
+
+    /* Ilustración */
+    .hero-illustration {
+        height: 340px;
+        max-width: 360px;
+    }
+
+    .illustration-circle {
+        width: 260px;
+        height: 260px;
+    }
+
+    .illustration-content {
+        width: 190px;
+        height: 190px;
+        padding: 20px;
+    }
+
+    .illustration-content i {
+        font-size: 48px;
+        margin-bottom: 7px;
+    }
+
+    .illustration-content h3 {
+        font-size: 21px;
+    }
+
+    .illustration-content p {
+        font-size: 10px;
+    }
+
+    .floating-card {
+        padding: 10px 12px;
+        font-size: 10px;
+        gap: 7px;
+    }
+
+    .floating-card i {
+        font-size: 16px;
+    }
+
+    .card-one {
+        top: 10px;
+        left: 0;
+    }
+
+    .card-two {
+        top: 145px;
+        right: -5px;
+    }
+
+    .card-three {
+        bottom: 5px;
+        left: 0;
+    }
+
+    /* Encabezados */
+    .section-heading h2 {
+        font-size: 29px;
+    }
+
+    .section-heading p {
+        font-size: 13px;
+    }
+
+    /* Secciones */
+    .welcome-section,
+    .modules-section {
+        padding: 65px 0;
+    }
+
+    .welcome-card {
+        padding: 28px 22px;
+    }
+
+    .module-card {
+        padding: 27px;
+    }
+
+    .module-card h4 {
+        font-size: 18px;
+    }
+
+    /* Sección final */
+    .final-section {
+        padding: 65px 0;
+    }
+
+    .final-content h2 {
+        font-size: 30px;
+    }
+
+    .final-content p {
+        font-size: 13px;
+    }
+
+    /* Pie de página */
+    .footer {
+        padding-top: 35px;
+    }
+
+    .footer .text-md-end {
+        text-align: left !important;
+        margin-top: 20px;
+    }
+
+}
+
+
+/* =========================================
+   4. CELULARES PEQUEÑOS
+   Hasta 575px
+========================================= */
+
+@media (max-width: 575px) {
+
+    /* Contenedor */
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* Portada */
+    .hero-content h1 {
+        font-size: 34px;
+    }
+
+    .hero-description {
+        font-size: 13px;
+    }
+
+    .hero-illustration {
+        height: 300px;
+    }
+
+    .illustration-circle {
+        width: 225px;
+        height: 225px;
+    }
+
+    .illustration-content {
+        width: 165px;
+        height: 165px;
+    }
+
+    .illustration-content i {
+        font-size: 40px;
+    }
+
+    .illustration-content h3 {
+        font-size: 19px;
+    }
+
+    .illustration-content p {
+        font-size: 9px;
+    }
+
+    .floating-card {
+        padding: 8px 10px;
+        font-size: 9px;
+    }
+
+    .card-one {
+        left: -5px;
+    }
+
+    .card-two {
+        right: -5px;
+    }
+
+    .card-three {
+        left: -5px;
+    }
+
+    /* Encabezados */
+    .section-heading h2 {
+        font-size: 26px;
+    }
+
+    .section-label {
+        font-size: 10px;
+    }
+
+    /* Tarjetas */
+    .welcome-card {
+        padding: 25px 20px;
+    }
+
+    .module-card {
+        padding: 24px;
+    }
+
+    .module-icon {
+        width: 52px;
+        height: 52px;
+        font-size: 24px;
+    }
+
+    /* Sección final */
+    .final-content h2 {
+        font-size: 26px;
+    }
+
+    .final-content > i {
+        font-size: 45px;
+    }
+
+}
+
+
+/* =========================================
+   5. ACCESIBILIDAD
+   Reducir animaciones si el usuario lo solicita
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}

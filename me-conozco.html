@@ -1,0 +1,244 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Me Conozco | ORIENTA FUTURO</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --turquesa: #0d9488;
+            --azul-oscuro: #123047;
+            --fondo: #f4f8fa;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: var(--fondo);
+            color: var(--azul-oscuro);
+            margin: 0;
+        }
+
+        /* Barra de navegación */
+        .navbar {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+        }
+
+        .navbar-brand {
+            color: var(--turquesa);
+            font-weight: 800;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-regresar {
+            background: var(--turquesa);
+            color: white;
+            border-radius: 25px;
+            padding: 9px 20px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .btn-regresar:hover {
+            background: #087c73;
+            color: white;
+        }
+
+        /* Encabezado */
+        .hero {
+            background: linear-gradient(135deg, #0d9488, #123047);
+            color: white;
+            padding: 55px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .hero p {
+            max-width: 750px;
+            margin: auto;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        /* Contenido */
+        .contenido {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 15px;
+        }
+
+        .introduccion {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .introduccion h2 {
+            font-weight: 700;
+            color: var(--azul-oscuro);
+        }
+
+        .introduccion p {
+            color: #64748b;
+        }
+
+        .formulario-card {
+            background: white;
+            padding: 20px;
+            border-radius: 18px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.07);
+        }
+
+        .formulario-titulo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+        }
+
+        .formulario-titulo .icono {
+            background: #e0f2f1;
+            color: var(--turquesa);
+            padding: 12px;
+            border-radius: 12px;
+            font-size: 24px;
+        }
+
+        .formulario-titulo h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .formulario-titulo p {
+            color: #64748b;
+            font-size: 0.9rem;
+            margin: 4px 0 0;
+        }
+
+        /* Google Forms */
+        .google-form {
+            width: 100%;
+            height: 3850px;
+            border: none;
+            display: block;
+        }
+
+        /* Pie de página */
+        footer {
+            background: var(--azul-oscuro);
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        @media (max-width: 576px) {
+            .hero {
+                padding: 40px 18px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .formulario-card {
+                padding: 12px;
+            }
+
+            .google-form {
+                height: 4000px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVEGACIÓN -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                ORIENTA FUTURO
+            </a>
+
+            <a href="index.html" class="btn-regresar">
+                ← Volver al inicio
+            </a>
+        </div>
+    </nav>
+
+    <!-- ENCABEZADO -->
+    <section class="hero">
+        <div class="container">
+            <h1>ME CONOZCO</h1>
+            <p>
+                Descubre tus intereses, reconoce tus habilidades
+                y comienza a construir tu futuro profesional.
+            </p>
+        </div>
+    </section>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="contenido">
+
+        <div class="introduccion">
+            <h2>¿Qué te gustaría estudiar después del colegio?</h2>
+
+            <p>
+                Este espacio te ayudará a reflexionar sobre tus intereses,
+                preferencias y expectativas para tu futuro.
+            </p>
+
+            <p>
+                Responde con sinceridad. No existen respuestas
+                correctas o incorrectas.
+            </p>
+        </div>
+
+        <!-- FORMULARIO -->
+        <section class="formulario-card">
+
+            <div class="formulario-titulo">
+                <div class="icono">📝</div>
+
+                <div>
+                    <h3>Encuesta sobre elección vocacional</h3>
+                    <p>Completa las preguntas para conocerte mejor.</p>
+                </div>
+            </div>
+
+            <iframe
+                class="google-form"
+                src="https://docs.google.com/forms/d/e/1FAIpQLSdCHm4k6mXiInokgSAaJDg5CeQPFJv0QdVngbrHIfjlntOuTQ/viewform?embedded=true"
+                title="Encuesta sobre elección vocacional"
+                loading="lazy">
+                Cargando formulario...
+            </iframe>
+
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p><strong>ORIENTA FUTURO</strong></p>
+        <p>Unidad Educativa Pantaleón Dalence</p>
+        <p>Orientación vocacional para construir tu futuro.</p>
+    </footer>
+
+</body>
+</html>

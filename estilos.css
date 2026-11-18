@@ -1,0 +1,941 @@
+
+/* =========================================
+   ORIENTA FUTURO
+   HOJA DE ESTILOS PRINCIPAL
+========================================= */
+
+
+/* =========================================
+   1. VARIABLES DE DISEÑO
+========================================= */
+
+:root {
+    --color-primary: #16B8AD;
+    --color-primary-dark: #0E958D;
+
+    --color-secondary: #073B55;
+    --color-secondary-light: #105675;
+
+    --color-white: #FFFFFF;
+    --color-background: #F5FAFC;
+
+    --color-text: #263D4A;
+    --color-text-light: #647985;
+
+    --color-border: #E4EDF1;
+
+    --color-orange: #F3A64A;
+
+    --shadow-soft: 0 8px 25px rgba(7, 59, 85, 0.08);
+    --shadow-hover: 0 15px 35px rgba(7, 59, 85, 0.13);
+
+    --radius-card: 18px;
+}
+
+
+/* =========================================
+   2. CONFIGURACIÓN GENERAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: var(--color-white);
+    color: var(--color-text);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   3. BARRA DE NAVEGACIÓN
+========================================= */
+
+.navbar {
+    background-color: var(--color-secondary);
+    padding: 14px 0;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.12);
+}
+
+.navbar-brand {
+    gap: 10px;
+}
+
+.logo-icon {
+    width: 43px;
+    height: 43px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 25px;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.brand-name {
+    color: var(--color-white);
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.brand-text small {
+    color: #A9D9D8;
+    font-size: 11px;
+    margin-top: 3px;
+}
+
+.navbar-nav {
+    gap: 2px;
+}
+
+.navbar .nav-link {
+    color: #D5E7EC;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 10px 9px !important;
+    transition: 0.3s;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: var(--color-primary);
+}
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+
+/* =========================================
+   4. SECCIÓN PRINCIPAL - HERO
+========================================= */
+
+.hero-section {
+    position: relative;
+    min-height: 680px;
+    padding: 150px 0 90px;
+
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(22, 184, 173, 0.12),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #F7FCFD 0%,
+            #EAF8F7 100%
+        );
+
+    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    background-color: rgba(22, 184, 173, 0.12);
+    color: var(--color-primary-dark);
+
+    padding: 9px 16px;
+    border-radius: 30px;
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+    margin-bottom: 25px;
+}
+
+.hero-label i {
+    font-size: 15px;
+}
+
+.hero-content h1 {
+    color: var(--color-secondary);
+    font-size: clamp(38px, 5vw, 58px);
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 25px;
+    letter-spacing: -1.5px;
+}
+
+.hero-content h1 span {
+    color: var(--color-primary-dark);
+}
+
+.hero-description {
+    max-width: 530px;
+    color: var(--color-text-light);
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 13px;
+}
+
+
+/* =========================================
+   5. BOTONES PRINCIPALES
+========================================= */
+
+.btn-primary-custom {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    background-color: var(--color-primary);
+    color: var(--color-white);
+
+    padding: 14px 25px;
+    border-radius: 9px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    border: 2px solid var(--color-primary);
+    transition: 0.3s;
+}
+
+.btn-primary-custom:hover {
+    background-color: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+    color: var(--color-white);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-soft);
+}
+
+.btn-outline-custom {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: transparent;
+    color: var(--color-secondary);
+
+    padding: 14px 25px;
+    border-radius: 9px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    border: 2px solid var(--color-secondary);
+    transition: 0.3s;
+}
+
+.btn-outline-custom:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+}
+
+.hero-note {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    color: var(--color-text-light);
+    font-size: 12px;
+
+    margin-top: 25px;
+}
+
+.hero-note i {
+    color: var(--color-primary-dark);
+    font-size: 17px;
+}
+
+
+/* =========================================
+   6. ILUSTRACIÓN PRINCIPAL
+========================================= */
+
+.hero-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-illustration {
+    position: relative;
+
+    width: 100%;
+    max-width: 480px;
+    height: 430px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.illustration-circle {
+    position: absolute;
+
+    width: 340px;
+    height: 340px;
+
+    background: linear-gradient(
+        135deg,
+        #16B8AD,
+        #0D758C
+    );
+
+    border-radius: 50%;
+    opacity: 0.95;
+
+    box-shadow: 0 20px 50px rgba(22, 184, 173, 0.22);
+}
+
+.illustration-content {
+    position: relative;
+    z-index: 2;
+
+    width: 245px;
+    height: 245px;
+
+    border-radius: 50%;
+    background-color: var(--color-white);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 25px;
+
+    box-shadow: var(--shadow-hover);
+}
+
+.illustration-content i {
+    font-size: 65px;
+    color: var(--color-primary-dark);
+    margin-bottom: 12px;
+}
+
+.illustration-content h3 {
+    color: var(--color-secondary);
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.illustration-content p {
+    color: var(--color-text-light);
+    font-size: 12px;
+    margin-bottom: 0;
+}
+
+.floating-card {
+    position: absolute;
+    z-index: 3;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    background-color: var(--color-white);
+    padding: 13px 17px;
+
+    border-radius: 12px;
+    box-shadow: var(--shadow-soft);
+
+    color: var(--color-secondary);
+    font-size: 12px;
+    font-weight: 700;
+
+    animation: float 4s ease-in-out infinite;
+}
+
+.floating-card i {
+    font-size: 20px;
+    color: var(--color-primary-dark);
+}
+
+.card-one {
+    top: 45px;
+    left: 0;
+}
+
+.card-two {
+    top: 180px;
+    right: -5px;
+    animation-delay: 1s;
+}
+
+.card-three {
+    bottom: 45px;
+    left: 15px;
+    animation-delay: 2s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+
+/* =========================================
+   7. ENCABEZADOS DE SECCIÓN
+========================================= */
+
+.section-heading {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.section-label {
+    display: inline-block;
+
+    color: var(--color-primary-dark);
+    background-color: rgba(22, 184, 173, 0.10);
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+
+    padding: 8px 16px;
+    border-radius: 30px;
+
+    margin-bottom: 17px;
+}
+
+.section-heading h2 {
+    color: var(--color-secondary);
+    font-size: clamp(27px, 4vw, 38px);
+    font-weight: 800;
+    margin-bottom: 18px;
+}
+
+.section-heading h2 span {
+    color: var(--color-primary-dark);
+}
+
+.section-heading p {
+    color: var(--color-text-light);
+    font-size: 15px;
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   8. SECCIÓN DE BIENVENIDA
+========================================= */
+
+.welcome-section {
+    padding: 95px 0;
+    background-color: var(--color-white);
+}
+
+.welcome-card {
+    height: 100%;
+    padding: 32px 25px;
+
+    text-align: center;
+
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+
+    transition: 0.3s;
+}
+
+.welcome-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+    border-color: transparent;
+}
+
+.welcome-icon {
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 auto 20px;
+
+    border-radius: 18px;
+    font-size: 29px;
+}
+
+.icon-turquoise {
+    background-color: rgba(22, 184, 173, 0.13);
+    color: var(--color-primary-dark);
+}
+
+.icon-blue {
+    background-color: rgba(7, 59, 85, 0.10);
+    color: var(--color-secondary);
+}
+
+.icon-orange {
+    background-color: rgba(243, 166, 74, 0.15);
+    color: #D88A24;
+}
+
+.welcome-card h4 {
+    color: var(--color-secondary);
+    font-size: 19px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.welcome-card p {
+    color: var(--color-text-light);
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   9. SECCIÓN DE MÓDULOS
+========================================= */
+
+.modules-section {
+    padding: 95px 0;
+    background-color: var(--color-background);
+}
+
+.module-card {
+    position: relative;
+    height: 100%;
+
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+
+    padding: 30px;
+
+    transition: 0.3s;
+}
+
+.module-card:hover {
+    transform: translateY(-7px);
+    box-shadow: var(--shadow-hover);
+    border-color: rgba(22, 184, 173, 0.35);
+}
+
+.module-icon {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(22, 184, 173, 0.12);
+    color: var(--color-primary-dark);
+
+    border-radius: 15px;
+    font-size: 27px;
+
+    margin-bottom: 22px;
+}
+
+.module-number {
+    display: block;
+
+    color: var(--color-primary-dark);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+    margin-bottom: 10px;
+}
+
+.module-card h4 {
+    color: var(--color-secondary);
+    font-size: 19px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.module-card p {
+    color: var(--color-text-light);
+    font-size: 13px;
+    min-height: 66px;
+}
+
+.module-card a {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    color: var(--color-primary-dark);
+    font-size: 13px;
+    font-weight: 800;
+
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.module-card a:hover {
+    color: var(--color-secondary);
+    gap: 14px;
+}
+
+
+/* =========================================
+   10. SECCIÓN FINAL
+========================================= */
+
+.final-section {
+    padding: 85px 0;
+
+    background: linear-gradient(
+        135deg,
+        var(--color-secondary),
+        var(--color-secondary-light)
+    );
+
+    position: relative;
+    overflow: hidden;
+}
+
+.final-content {
+    position: relative;
+    z-index: 2;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.final-content > i {
+    color: var(--color-primary);
+    font-size: 55px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.final-content h2 {
+    color: var(--color-white);
+    font-size: clamp(29px, 4vw, 42px);
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.final-content h2 span {
+    color: #54D9CD;
+}
+
+.final-content p {
+    color: #D0E0E7;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+.btn-light-custom {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    background-color: var(--color-white);
+    color: var(--color-secondary);
+
+    padding: 14px 25px;
+    border-radius: 9px;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    transition: 0.3s;
+}
+
+.btn-light-custom:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   11. PIE DE PÁGINA
+========================================= */
+
+.footer {
+    background-color: #052D41;
+    padding: 45px 0 15px;
+    color: var(--color-white);
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.footer-brand i {
+    color: var(--color-primary);
+    font-size: 25px;
+}
+
+.footer p {
+    color: #B6CBD3;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.footer-institution {
+    font-weight: 700;
+    color: var(--color-white) !important;
+}
+
+.footer hr {
+    border-color: rgba(255, 255, 255, 0.15);
+    margin: 30px 0 20px;
+}
+
+.footer-bottom p {
+    font-size: 11px;
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   12. EFECTOS Y TRANSICIONES
+========================================= */
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+
+/* =========================================
+   ANIMACIONES DE APARICIÓN
+========================================= */
+
+.animar-entrada {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.animar-entrada.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =====================================
+   TARJETAS DE LAS FACULTADES
+===================================== */
+
+/* Distribución de las facultades */
+#listaFacultades {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+}
+
+/* Contenedor de cada facultad */
+.facultad-item {
+    width: 100%;
+}
+
+/* Tarjeta */
+.facultad-card {
+    height: 100%;
+    min-height: 360px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    padding: 28px 24px;
+    box-shadow: 0 5px 18px rgba(18, 48, 71, 0.06);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Efecto al pasar el cursor */
+.facultad-card:hover {
+    transform: translateY(-7px);
+    border-color: #0d9488;
+    box-shadow: 0 14px 28px rgba(13, 148, 136, 0.13);
+}
+
+/* Icono */
+.facultad-icono {
+    width: 58px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e0f2f1;
+    color: #0d9488;
+    border-radius: 15px;
+    font-size: 27px;
+    margin-bottom: 20px;
+}
+
+/* Número de facultad */
+.facultad-numero {
+    color: #0d9488;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 9px;
+}
+
+/* Nombre */
+.facultad-card h3 {
+    color: #123047;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.35;
+    margin-bottom: 9px;
+}
+
+/* Sigla */
+.facultad-sigla {
+    color: #0d9488;
+    font-weight: 700;
+    font-size: 13px;
+    margin-bottom: 14px;
+}
+
+/* Descripción */
+.facultad-card p {
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+/* Botón */
+.btn-facultad {
+    margin-top: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: fit-content;
+    padding: 10px 20px;
+    background: #0d9488;
+    color: #ffffff;
+    border: none;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-facultad:hover {
+    background: #087c73;
+    color: #ffffff;
+}
+
+/* Adaptación para tablets */
+@media (max-width: 992px) {
+    #listaFacultades {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Adaptación para celulares */
+@media (max-width: 576px) {
+    #listaFacultades {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .facultad-card {
+        min-height: auto;
+        padding: 24px 20px;
+    }
+}
+
+
+/* LOGO DE LA UNIDAD EDUCATIVA EN EL MENÚ */
+.logo-institucional {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 12px;
+}
+
+.logo-unidad-educativa {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    display: block;
+    background: #ffffff;
+    border-radius: 50%;
+    padding: 3px;
+    transition: transform 0.3s ease;
+}
+
+.logo-unidad-educativa:hover {
+    transform: scale(1.08);
+}
+
+/* Adaptación para celulares */
+@media (max-width: 991px) {
+    .logo-institucional {
+        justify-content: flex-start;
+        padding: 12px 0;
+    }
+
+    .logo-unidad-educativa {
+        width: 45px;
+        height: 45px;
+    }
+}
+
